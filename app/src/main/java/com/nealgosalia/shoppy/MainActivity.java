@@ -1,11 +1,15 @@
 package com.nealgosalia.shoppy;
 
+import android.content.Intent;
 import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.ncapdevi.fragnav.FragNavController;
+import com.nealgosalia.shoppy.Activities.AccountActivity;
 import com.nealgosalia.shoppy.Fragments.CartFragment;
 import com.nealgosalia.shoppy.Fragments.FavFragment;
 import com.nealgosalia.shoppy.Fragments.HomeFragment;
@@ -29,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolBar);
+        setSupportActionBar(mToolbar);
         List<Fragment> fragments = new ArrayList<>(4);
         fragments.add(new HomeFragment());
         fragments.add(new FavFragment());
@@ -60,5 +66,10 @@ public class MainActivity extends AppCompatActivity {
                 fragNavController.clearStack();
             }
         });
+    }
+
+    public void accountSettingsClicked(View v){
+        Intent i =new Intent(MainActivity.this, AccountActivity.class);
+        startActivity(i);
     }
 }
