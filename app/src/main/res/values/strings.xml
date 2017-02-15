@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Shoppy</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="facebook_app_id">1615079448506412</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="signIn">Sign In</string>
+    <string name="signUp">Sign Up</string>
+    <string name="facebookSignIn">Sign in with facebook</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="newUserText">No account yet? Create one!</string>
+    <string name="existingUserText">Already have an account? Sign In!</string>
+    <string name="auth_successful">Account created!</string>
+    <string name="auth_failed">Incorrect username or password!</string>
+    <string name="empty_fields">One or more of the fields are empty</string>
+    <string name="password_mismatch">The passwords do not match!</string>
 </resources>

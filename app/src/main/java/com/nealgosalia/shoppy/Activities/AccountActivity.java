@@ -1,11 +1,13 @@
 package com.nealgosalia.shoppy.Activities;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.nealgosalia.shoppy.Fragments.SignInFragment;
 import com.nealgosalia.shoppy.R;
 
 
@@ -26,5 +28,12 @@ public class AccountActivity extends AppCompatActivity {
                 finish();
             }
         });
+        getFragmentManager().beginTransaction().replace(android.R.id.content, new SignInFragment()).commit();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        SignInFragment.mCallbackManager.onActivityResult(requestCode, resultCode, data);
     }
 }
