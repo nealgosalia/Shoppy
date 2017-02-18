@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "473260805449-iskvcjbd2aicp4esvtspepdqcbc7tuq1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nealgosalia.shoppy",
+            "certificate_hash": "C20FB0B1587AE4EDFD8E647EE4BFCB79B08037AC"
+          }
+        },
+        {
           "client_id": "473260805449-pdeiqv165dp7kuothfb3bcg0vks6ttt6.apps.googleusercontent.com",
           "client_type": 3
         }
