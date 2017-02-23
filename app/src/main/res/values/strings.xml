@@ -9,6 +9,7 @@
     <string name="password">Password</string>
     <string name="signIn">Sign In</string>
     <string name="signUp">Sign Up</string>
+    <string name="signOut">Sign Out</string>
     <string name="facebookSignIn">Sign in with facebook</string>
     <string name="confirmPassword">Confirm Password</string>
     <string name="newUserText">No account yet? Create one!</string>

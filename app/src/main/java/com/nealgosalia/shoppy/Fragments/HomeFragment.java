@@ -1,6 +1,7 @@
 package com.nealgosalia.shoppy.Fragments;
 
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -21,9 +22,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
+import com.nealgosalia.shoppy.Activities.ItemsActivity;
 import com.nealgosalia.shoppy.Adapters.CategoryAdapter;
 import com.nealgosalia.shoppy.R;
 import com.nealgosalia.shoppy.Util.Category;
+import com.nealgosalia.shoppy.Util.RecyclerItemClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,6 +87,13 @@ public class HomeFragment extends Fragment {
         recyclerItems.setItemAnimator(new DefaultItemAnimator());
         //recyclerItems.addItemDecoration(new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL));
         recyclerItems.setAdapter(mItemsAdapter);
+        recyclerItems.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), new RecyclerItemClickListener.OnItemClickListener() {
+            @Override public void onItemClick(View view, int position) {
+                Intent i = new Intent(getActivity(), ItemsActivity.class);
+                i.putExtra("CATEGORY", categoryList.get(position).categoryName);
+                startActivity(i);
+            }
+        }));
         return view;
     }
 
